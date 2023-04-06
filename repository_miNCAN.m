@@ -8,11 +8,13 @@ function option= repository_miNCAN(opt)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%Change these 2 lines
 
-%option.startFolder ='D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results2-resultsData';
-%option.saveFolder = 'D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results\2-resultsData';
-option.startFolder ='/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
-option.saveFolder = '/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
+option.startFolder ='D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results2-resultsData';
+option.saveFolder = 'D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results\2-resultsData';
+
+%option.startFolder ='/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
+%option.saveFolder = '/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
 
 
 option.resample = 1000;

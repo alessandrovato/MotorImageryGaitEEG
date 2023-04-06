@@ -31,25 +31,24 @@ else
     if ~exist('subjectToProcess','var')
         % third parameter does not exist
         if strcmp (fileToProcess(end-1:end),'C1')
-            %listFilesToLoad = [dir([analysis_opts.saveFolder,'\*',fileToProcess,'L.set'])];
+            listFilesToLoad = [dir([analysis_opts.saveFolder,'\*',fileToProcess,'L.set'])];
 % MAC %%%%%
-            listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'L.set'])];
+            %listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'L.set'])];
         else
             
-            %listFilesToLoad = dir([analysis_opts.saveFolder,'\*',fileToProcess,'.set']);
+            listFilesToLoad = dir([analysis_opts.saveFolder,'\*',fileToProcess,'.set']);
 % MAC %%%%%
-            listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'.set'])];            
+            %listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'.set'])];            
         end
     else
         if strcmp (fileToProcess(end-1:end),'C1')
-            %listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'L.set']);
+            listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
 % MAC %%%%%  
-            listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
-            
+            %listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
         else
-            %listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
+            listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
 % MAC %%%%%             
-            listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
+            %listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
         end
         
     end
@@ -91,7 +90,6 @@ switch(code(1))
         plotTopoDist(loadFile,loadFolder,numFiles,analysis_opts);
         
 end
-
 
 end
 

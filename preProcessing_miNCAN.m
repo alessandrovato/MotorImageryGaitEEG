@@ -19,7 +19,8 @@ for i = 1 : numFiles
         %======================
         % set channel locations 
         %======================
-        EEG=pop_chanedit(EEG, 'lookup','D:\\0-MATLAB\\eeglab2021.1\\plugins\\dipfit\\standard_BEM\\elec\\standard_1005.elc');
+        %EEG=pop_chanedit(EEG, 'lookup','D:\\0-MATLAB\\eeglab2021.1\\plugins\\dipfit\\standard_BEM\\elec\\standard_1005.elc');
+        EEG=pop_chanedit(EEG, 'lookup',option.channelLocationFile);
         
         %=================
         % band-pass filter 

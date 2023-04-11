@@ -53,7 +53,6 @@ for i = 1 : numFiles
                     EEGBS = pop_saveset( EEGBS, 'filename',char(saveFileName),'filepath',option.saveFolder);
                 end
               
-                
                 option.event = 'R';
                 option.epochName  = 'Stance & Swing';
                 

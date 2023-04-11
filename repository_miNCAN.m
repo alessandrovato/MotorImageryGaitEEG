@@ -67,7 +67,6 @@ switch(opt)
     option.lowFreqFilter = 1;
     option.highFreqFilter = 40;
     
-    'D:\\0-MATLAB\\eeglab2021.1\\plugins\\dipfit\\standard_BEM\\elec\\standard_1005.elc'
     
     %==================
     % add marker/events

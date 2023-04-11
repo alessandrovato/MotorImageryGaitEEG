@@ -12,6 +12,7 @@ function option= repository_miNCAN(opt)
 
 option.startFolder ='D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results2-resultsData';
 option.saveFolder = 'D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results\2-resultsData';
+option.channelLocationFile = 'D:\\0-MATLAB\\eeglab2021.1\\plugins\\dipfit\\standard_BEM\\elec\\standard_1005.elc';
 
 %option.startFolder ='/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
 %option.saveFolder = '/Users/vatoadmin/Dropbox/03-MATLAB/1_Data/0_miNCAN_Data/miNcan_Results';
@@ -65,6 +66,8 @@ switch(opt)
     option.suffix = 'A1';
     option.lowFreqFilter = 1;
     option.highFreqFilter = 40;
+    
+    'D:\\0-MATLAB\\eeglab2021.1\\plugins\\dipfit\\standard_BEM\\elec\\standard_1005.elc'
     
     %==================
     % add marker/events

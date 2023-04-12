@@ -30,26 +30,26 @@ else
     
     if ~exist('subjectToProcess','var')
         % third parameter does not exist
-        if strcmp (fileToProcess(end-1:end),'C1')
-            listFilesToLoad = [dir([analysis_opts.saveFolder,'\*',fileToProcess,'L.set'])];
+        %if strcmp (fileToProcess(end-1:end),'C1')
+            listFilesToLoad = [dir([analysis_opts.saveFolder,'\*',fileToProcess,'.set'])];
 % MAC %%%%%
             %listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'L.set'])];
-        else
+        %else
             
-            listFilesToLoad = dir([analysis_opts.saveFolder,'\*',fileToProcess,'.set']);
+            %listFilesToLoad = dir([analysis_opts.saveFolder,'\*',fileToProcess,'.set']);
 % MAC %%%%%
             %listFilesToLoad = [dir([analysis_opts.saveFolder,'/*',fileToProcess,'.set'])];            
-        end
+        %end
     else
-        if strcmp (fileToProcess(end-1:end),'C1')
-            listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
+        %if strcmp (fileToProcess(end-1:end),'C1')
+            %listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
 % MAC %%%%%  
             %listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
-        else
+        %else
             listFilesToLoad = dir([analysis_opts.saveFolder,'\',subjectToProcess,'*',fileToProcess,'.set']);
 % MAC %%%%%             
             %listFilesToLoad = dir([analysis_opts.saveFolder,'/',subjectToProcess,'*',fileToProcess,'.set']);
-        end
+        %end
         
     end
     
@@ -68,6 +68,10 @@ switch(code(1))
     case 10
 
         loadBCI2000DataEEG_miNCAN(loadFile,loadFolder,numFiles,analysis_opts);
+    
+    case 20
+        
+        loadEEGDataset_miNCAN(loadFile,loadFolder,numFiles,analysis_opts)    
         
     case 'A'
 

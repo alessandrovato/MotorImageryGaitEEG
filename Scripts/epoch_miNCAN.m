@@ -17,41 +17,41 @@ for i = 1 : numFiles
         
         newFileName = erase(fileName,'.set');
  
-                option.run_epochs = 1;
-                option.load_folder = 0;
-                
-                
-                option.event = 'R';
-                option.epochName  = 'Left Swing';
-                
-                EEG = pop_loadset('filename',char(fileName),'filepath',loadFolder);
-                
-                EEGLS= pop_epoch( EEG, {  option.event  }, [option.minEpoch  option.maxEpoch], 'newname', option.epochName, 'epochinfo', 'yes');
-                
-                saveFileName = {[char(newFileName),option.suffix, 'L.set']};
-                if  ~isempty(EEG.urevent)
-                    EEGLS = pop_saveset( EEGLS, 'filename',char(saveFileName),'filepath',option.saveFolder);
-                end
-                
-                option.event = 'L';
-                option.epochName  = 'Right Swing';
-                
-                EEGRS= pop_epoch( EEG, {  option.event  }, [option.minEpoch  option.maxEpoch], 'newname', option.epochName, 'epochinfo', 'yes');
-                
-                saveFileName = {[char(newFileName),option.suffix, 'R.set']};
-                if  ~isempty(EEG.urevent)
-                    EEGRS = pop_saveset( EEGRS, 'filename',char(saveFileName),'filepath',option.saveFolder);
-                end
-                
-                option.event = 'DigitalInput1';
-                option.epochName  = 'Baseline';
-                
-                EEGBS= pop_epoch( EEG, {  option.event  }, [option.minEpochBaseline  option.maxEpochBaseline], 'newname', option.epochName, 'epochinfo', 'yes');
-                
-                saveFileName = {[char(newFileName),option.suffix, 'B.set']};
-                if  ~isempty(EEG.urevent)
-                    EEGBS = pop_saveset( EEGBS, 'filename',char(saveFileName),'filepath',option.saveFolder);
-                end
+%                 option.run_epochs = 1;
+%                 option.load_folder = 0;
+%                 
+%                 
+%                 option.event = 'R';
+%                 option.epochName  = 'Left Swing';
+%                 
+%                 EEG = pop_loadset('filename',char(fileName),'filepath',loadFolder);
+%                 
+%                 EEGLS= pop_epoch( EEG, {  option.event  }, [option.minEpoch  option.maxEpoch], 'newname', option.epochName, 'epochinfo', 'yes');
+%                 
+%                 saveFileName = {[char(newFileName),option.suffix, 'L.set']};
+%                 if  ~isempty(EEG.urevent)
+%                     EEGLS = pop_saveset( EEGLS, 'filename',char(saveFileName),'filepath',option.saveFolder);
+%                 end
+%                 
+%                 option.event = 'L';
+%                 option.epochName  = 'Right Swing';
+%                 
+%                 EEGRS= pop_epoch( EEG, {  option.event  }, [option.minEpoch  option.maxEpoch], 'newname', option.epochName, 'epochinfo', 'yes');
+%                 
+%                 saveFileName = {[char(newFileName),option.suffix, 'R.set']};
+%                 if  ~isempty(EEG.urevent)
+%                     EEGRS = pop_saveset( EEGRS, 'filename',char(saveFileName),'filepath',option.saveFolder);
+%                 end
+%                 
+%                 option.event = 'DigitalInput1';
+%                 option.epochName  = 'Baseline';
+%                 
+%                 EEGBS= pop_epoch( EEG, {  option.event  }, [option.minEpochBaseline  option.maxEpochBaseline], 'newname', option.epochName, 'epochinfo', 'yes');
+%                 
+%                 saveFileName = {[char(newFileName),option.suffix, 'B.set']};
+%                 if  ~isempty(EEG.urevent)
+%                     EEGBS = pop_saveset( EEGBS, 'filename',char(saveFileName),'filepath',option.saveFolder);
+%                 end
               
                 option.event = 'R';
                 option.epochName  = 'Stance & Swing';

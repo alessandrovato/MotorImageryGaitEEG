@@ -89,7 +89,7 @@ switch(opt)
     option.load_folder = 0;
     %option.event = 'R';
     
-    option.minEpochSS = -0.3;
+    option.minEpochSS = -0.1;
     option.maxEpochSS = 1.9;
     
     option.minEpoch = -0.1;

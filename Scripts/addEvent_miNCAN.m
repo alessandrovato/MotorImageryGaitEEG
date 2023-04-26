@@ -23,8 +23,8 @@ for i = 1 : numFiles
         EEG = eeg_checkset( EEG );
         
         %this line delete the first DigitalInput if the second is too close
-        
-        if(EEG.event(2).latency-EEG.event(1).latency)<10000
+        % just in case there are more than just one DigitalInput
+        if size(EEG.event,2)+1>2 && (EEG.event(2).latency-EEG.event(1).latency)<10000
             EEG.event(1)=[];
         end
         

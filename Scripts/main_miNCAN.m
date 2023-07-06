@@ -3,7 +3,6 @@ function main_miNCAN (code, fileToProcess, subjectToProcess)
 % from Jan 2022 to June 2022 in a gait motor imagery experiment.
 % 
 %
-%
 % input : code
 %
 %  10 - convert .dat files into .set files and save in subject's folder
@@ -91,8 +90,10 @@ switch(code(1))
         plotGaitPSD2(loadFile,loadFolder,numFiles,analysis_opts);
         
     case 'F'
-        plotTopoDist(loadFile,loadFolder,numFiles,analysis_opts);
+        plotTopoDist(loadFile,loadFolder,numFiles,analysis_opts); 
         
+    case 'G'
+        rsquare_miNCAN(loadFile,loadFolder,numFiles,analysis_opts);
 end
 
 end

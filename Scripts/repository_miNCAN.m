@@ -194,6 +194,26 @@ switch(opt)
     option.minEpochBaseline = -600;
     option.maxEpochBaseline = -100;
     
+    %======================================================================
+    case 'G1'       % extract Gait Cycle (strating from R)
+    %======================================================================
+    
+    option.run_epochs = 1;
+    option.load_folder = 0;
+    %option.event = 'L';
+    
+    option.minEpochStance = -0.1;
+    option.maxEpochStance= 0.6;
+     
+    option.minEpochSwing = 0.9;
+    option.maxEpochSwing = 1.6;
+    
+    
+    option.minEpochBaseline = -0.6;
+    option.maxEpochBaseline = -0.1;
+    
+    %option.epochName  = 'Gait Cycle';
+    %option.saveFolder = 'D:\0-MATLAB\1_Data\0_miNCAN_Data\miNCAN_results\Working\epochData';
     
     % extract pre-epochs 
     %=========
